@@ -1,0 +1,89 @@
+@import 'settings'; // Must be before foundation import
+@import 'node_modules/foundation-sites/scss/foundation';
+@import 'node_modules/motion-ui/src/motion-ui';
+
+@include foundation-everything;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+#animateMain {
+  @include mui-series {
+    h1 {
+      @include mui-queue(1s, -0.5, slide(in, 50px), fade(0, 1));
+    }
+
+    .subheader {
+      @include mui-queue(1s, -0.5, slide(in, 50px), fade(0, 1));
+    }
+
+    p {
+      @include mui-queue(1s, 0, slide(in, 50px), fade(0, 1));
+    }
+  }
+}
+h1 {
+  @include mui-animation(slide(in, 50px), fade(0, 1));
+  animation-duration:2000ms;
+}
+.App {
+  text-align: center;
+  background-color: yellow;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-class {
+  display: none;
+}
+
+#logo {
+  color: #fff;
+  font-weight: 700;
+  margin: 8px 0;
+  display: block;
+}
+
+.top-bar ul li a {
+  color: #fff;
+}
+
+.top-bar {
+  color: #fff;
+}
+
+h1, h3 {
+  margin-top: 1.5rem;
+}
