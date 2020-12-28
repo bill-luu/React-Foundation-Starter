@@ -17,7 +17,11 @@
     }
 
     p {
-      @include mui-queue(1s, 0, slide(in, 50px), fade(0, 1));
+      @include mui-queue(2s, -0.5, fade(0, 1));
+    }
+
+    .foo {
+      @include mui-queue(1s, -0.5, fade(0, 1));
     }
   }
 }
